@@ -17,4 +17,4 @@ docker build -t nginx:1.0 .
 kubectl apply -f nginx-deployment.yaml
 kubectl apply -f nginx-service.yaml
 echo "App deployed to a single cluster and is ready for use.."
-echo "Use this url - curl $(minikube ip):31310"
+echo "Use this url to access the app --->> curl $(minikube ip):31310"
