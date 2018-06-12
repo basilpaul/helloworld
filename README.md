@@ -37,8 +37,10 @@ The dev/test pipeline consists of the below steps:
 6. A conitnuous delivery (user intervention) or contnuous deployment (fully automated) can be used to promote to production
 
 
-# Production Hosting (EKS using terraform)
-In production, the app can be hosted on EKS (AWS managed kubernetes service).
-https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
+# Production Hosting
+Steps to create production cluster
 
-kubectl can be configured to talk to eks to perform deployments.
+1. Create EKS Master cluster - VPC, role, security group, master
+2. Create Nodes - VPC, security group, autoscaling group
+3. Use kubectl to deploy the app
+Reference: https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
