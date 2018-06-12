@@ -1,0 +1,24 @@
+source 'https://rubygems.org'
+ruby '~> 2.3.0'
+
+gem 'berkshelf'
+gem 'vagrant-wrapper'
+gem 'hashie', '~> 2.0'
+gem 'kitchen-inspec'
+gem 'chef', '12.21.14'
+gem 'foodcritic'
+gem 'chefspec'
+gem 'rspec_junit_formatter'
+gem 'rake'
+gem 'faraday'
+gem 'rubocop'
+gem 'rubocop-checkstyle_formatter', require: false
+gem 'colorize'
+gem 'ffi', '= 1.9'
+
+group :integration do
+  gem 'test-kitchen'
+  gem 'kitchen-vagrant'
+  gem 'kitchen-docker'
+  gem 'kitchen-ec2'
+end
