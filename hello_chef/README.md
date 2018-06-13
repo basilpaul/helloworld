@@ -1,7 +1,7 @@
 # hello_chef
 
 
-TODO: Enter the cookbook description here.
+This cookbook will deploy the helloworld python app
 
 
 When running each suite ensure that both rspec and serverspec tests work.
