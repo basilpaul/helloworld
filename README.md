@@ -1,3 +1,6 @@
+# Solution 1
+
+
 # Helloworld
 Hello world application deployed on kubernetes. 
 
@@ -43,4 +46,38 @@ Steps to create production cluster
 1. Create EKS Master cluster - VPC, role, security group, master
 2. Create Nodes - VPC, security group, autoscaling group
 3. Use kubectl to deploy the app
-Reference: https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
+
+
+# Solution 2
+
+# Helloworld
+Hello world application deployed using chef
+
+# Local Testing
+Prerequisites (Please make sure the following are installed to test on your laptop)
+
+1. Install Vagrant: https://www.vagrantup.com/downloads.html
+2. Install Virtualbox:  https://www.virtualbox.org/wiki/Downloads
+3. Install ruby and RVM to manage ruby versions
+4. cd /hello_chef
+5. gem install bundler
+6. bundle install
+7. berks install
+8. Unit tests: bundle exec rspec
+9. Integration tests: bundle exec kitchen verify
+10. Converge: bundle exec kitchen converge
+11. The app will be availabe on port 5000 and it can be port forwarded to the laptop using the virtualbox settings
+
+GET
+
+curl localhost:5000
+
+Healthcheck
+
+curl localhost:5000/healthcheck
+
+# Deployments
+Deployments can be performed by using chef_client talking to chef server hosting the cookbook.
+Additionally push jobs can be used to invoke the chef client
+
+
