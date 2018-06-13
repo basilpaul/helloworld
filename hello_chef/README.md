@@ -8,7 +8,10 @@ When running each suite ensure that both rspec and serverspec tests work.
 
 All tests are green at the moment of this README!!!
 
+
 RSPEC (unit tests)
+
+run:
 
 bundle exec rspec
 
@@ -20,7 +23,7 @@ run:
 bundle exec kitchen verify 'suite-name'
 
 
-Validation
+VALIDATION
 
 run:
 
