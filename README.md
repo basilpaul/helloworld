@@ -59,6 +59,8 @@ Prerequisites (Please make sure the following are installed to test on your lapt
 1. Install Vagrant: https://www.vagrantup.com/downloads.html
 2. Install Virtualbox:  https://www.virtualbox.org/wiki/Downloads
 3. Install ruby and RVM to manage ruby versions
+
+# Steps to converge
 4. cd /hello_chef
 5. gem install bundler
 6. bundle install
