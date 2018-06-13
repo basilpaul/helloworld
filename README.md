@@ -51,7 +51,7 @@ Steps to create production cluster
 # Solution 2
 
 # Helloworld
-Hello world application deployed using chef
+Hello world application deployed using chef (cookbook name is hello_chef)
 
 # Local Testing
 Prerequisites (Please make sure the following are installed to test on your laptop)
