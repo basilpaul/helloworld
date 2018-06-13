@@ -19,7 +19,7 @@ Steps to test
 3. Change directory to your cloned repo
 4. ./local_install.sh (run the install script)
 
-GET
+GET (The app is accessible at node port 31310)
 
 curl $(minikube ip):31310
 
@@ -32,12 +32,12 @@ The healthcheck can be used to check database connectivity (in case the app will
 # Pipeline - Continuous deployment/delivery
 The dev/test pipeline consists of the below steps:
 
-1. Developers commit their changes o local branches.
+1. Developers commit their changes to local branches.
 2. They perform tests and local deployment using minikube
 3. Once the changes have been reviewed, the branch is merged to release branch
-4. The automated deployment pipeline will be configured to spin up EKS clusters in AWS and deploy the app in an integration environment
+4. The automated deployment pipeline will be configured to deploy the app to EKS in an integration environment
 5. Automated tests will run here
-6. A conitnuous delivery (user intervention) or contnuous deployment (fully automated) can be used to promote to production
+6. A continuous delivery (user intervention) or contnuous deployment (fully automated) can be used to promote to production
 
 
 # Production Hosting
@@ -45,7 +45,7 @@ Steps to create production cluster
 
 1. Create EKS Master cluster - VPC, role, security group, master
 2. Create Nodes - VPC, security group, autoscaling group
-3. Use kubectl to deploy the app
+3. Configure kubectl to deploy the app to EKS
 
 
 # Solution 2
