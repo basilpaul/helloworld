@@ -1,8 +1,11 @@
 require 'serverspec'
 
-if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM).nil?
-  set :backend, :exec
-else
-  set :backend, :cmd
-  set :os, family: 'windows'
-end
+set :backend, :exec
+set :path, '/sbin:/usb/sbin:$PATH'
+
+require 'busser/rubygems'
+Busser::RubyGems.install_gem('faraday', '~> 0')
+Busser::RubyGems.install_gem('json', '~> 0')
+require 'faraday'
+require 'json'
+require 'uri'

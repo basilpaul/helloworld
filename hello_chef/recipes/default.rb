@@ -44,7 +44,7 @@ end
 
 execute "install application" do
   cwd "/opt"
-  command "git clone https://github.com/basilpaul/helloworld.git"
+  command "git clone #{node['hello']['app']}"
   not_if { ::Dir.exist?("/opt/helloworld") }
 end
 
